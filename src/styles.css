@@ -1,7 +1,7 @@
 /* Custom Styles */
 :root {
-    --font-serif: 'Cormorant Garamond', serif;
-    --font-sans: 'Inter', sans-serif;
+    --font-serif: "Cormorant Garamond", serif;
+    --font-sans: "Inter", sans-serif;
     --primary: #2d4a3e;
     --secondary: #8b7355;
     --accent: #5a7c65;
@@ -19,7 +19,14 @@ body {
     color: #3d3d3d;
     overflow-x: hidden;
 }
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-serif);
+}
 .font-serif {
     font-family: var(--font-serif);
 }
@@ -51,7 +58,9 @@ html {
 /* Field Notes Card */
 .field-notes-card {
     background-image: linear-gradient(to bottom, #f5f3ed 0%, #ebe8dd 100%);
-    box-shadow: 0 20px 40px rgba(45, 74, 62, 0.15), 0 10px 20px rgba(45, 74, 62, 0.1);
+    box-shadow:
+        0 20px 40px rgba(45, 74, 62, 0.15),
+        0 10px 20px rgba(45, 74, 62, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
@@ -60,7 +69,9 @@ html {
 .fade-in-section {
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transition:
+        opacity 0.6s ease-out,
+        transform 0.6s ease-out;
 }
 
 .fade-in-section.visible {
@@ -83,7 +94,9 @@ html {
 }
 
 .bird-card img {
-    transition: filter 0.7s ease-out, transform 0.7s ease-out;
+    transition:
+        filter 0.7s ease-out,
+        transform 0.7s ease-out;
     filter: blur(0.5px) brightness(1);
 }
 
@@ -95,7 +108,7 @@ html {
 .bird-card .vignette {
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at center, transparent 40%, rgba(0,0,0,0.15) 100%);
+    background: radial-gradient(circle at center, transparent 40%, rgba(0, 0, 0, 0.15) 100%);
     transition: opacity 0.5s ease;
     opacity: 1;
     pointer-events: none;
@@ -117,7 +130,9 @@ html {
     font-weight: 500;
     opacity: 0;
     transform: scale(0.8);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
 }
 
 .bird-card:hover .focus-badge {
@@ -145,14 +160,18 @@ html {
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 0.5rem;
     padding: 1.5rem;
-    box-shadow: 0 4px 12px rgba(45, 74, 62, 0.08), 0 2px 4px rgba(45, 74, 62, 0.04);
+    box-shadow:
+        0 4px 12px rgba(45, 74, 62, 0.08),
+        0 2px 4px rgba(45, 74, 62, 0.04);
     transition: all 0.5s ease;
     margin-bottom: 1.5rem;
     break-inside: avoid;
 }
 
 .trip-card:hover {
-    box-shadow: 0 20px 40px rgba(45, 74, 62, 0.15), 0 8px 16px rgba(45, 74, 62, 0.08);
+    box-shadow:
+        0 20px 40px rgba(45, 74, 62, 0.15),
+        0 8px 16px rgba(45, 74, 62, 0.08);
     border-color: rgba(90, 124, 101, 0.5);
     transform: translateY(-4px);
 }
