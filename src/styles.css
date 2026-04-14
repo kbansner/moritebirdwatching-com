@@ -1,0 +1,214 @@
+/* Custom Styles */
+:root {
+    --font-serif: 'Cormorant Garamond', serif;
+    --font-sans: 'Inter', sans-serif;
+    --primary: #2d4a3e;
+    --secondary: #8b7355;
+    --accent: #5a7c65;
+    --background: #f8f8f6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    color: #3d3d3d;
+    overflow-x: hidden;
+}
+
+.font-serif {
+    font-family: var(--font-serif);
+}
+
+.font-sans {
+    font-family: var(--font-sans);
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hero Carousel */
+.hero-carousel .slick-dots {
+    bottom: 30px;
+}
+
+.hero-carousel .slick-dots li button:before {
+    color: white;
+    font-size: 12px;
+    opacity: 0.5;
+}
+
+.hero-carousel .slick-dots li.slick-active button:before {
+    opacity: 1;
+}
+
+/* Field Notes Card */
+.field-notes-card {
+    background-image: linear-gradient(to bottom, #f5f3ed 0%, #ebe8dd 100%);
+    box-shadow: 0 20px 40px rgba(45, 74, 62, 0.15), 0 10px 20px rgba(45, 74, 62, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Fade in sections */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Bird Cards */
+.bird-card {
+    background: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+.bird-card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.bird-card img {
+    transition: filter 0.7s ease-out, transform 0.7s ease-out;
+    filter: blur(0.5px) brightness(1);
+}
+
+.bird-card:hover img {
+    filter: blur(0px) brightness(1.05);
+    transform: scale(1.08);
+}
+
+.bird-card .vignette {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, transparent 40%, rgba(0,0,0,0.15) 100%);
+    transition: opacity 0.5s ease;
+    opacity: 1;
+    pointer-events: none;
+}
+
+.bird-card:hover .vignette {
+    opacity: 0;
+}
+
+.bird-card .focus-badge {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background-color: rgba(90, 124, 101, 0.9);
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.bird-card:hover .focus-badge {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.bird-card .waveform {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.bird-card:hover .waveform {
+    opacity: 1;
+}
+
+/* Trip Cards */
+.trip-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(45, 74, 62, 0.08), 0 2px 4px rgba(45, 74, 62, 0.04);
+    transition: all 0.5s ease;
+    margin-bottom: 1.5rem;
+    break-inside: avoid;
+}
+
+.trip-card:hover {
+    box-shadow: 0 20px 40px rgba(45, 74, 62, 0.15), 0 8px 16px rgba(45, 74, 62, 0.08);
+    border-color: rgba(90, 124, 101, 0.5);
+    transform: translateY(-4px);
+}
+
+/* Canopy Transition Parallax */
+.canopy-transition {
+    background: linear-gradient(to bottom, #f8f8f6 0%, #e8e6e0 50%, #f8f8f6 100%);
+}
+
+.canopy-layers {
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.canopy-layers.visible {
+    opacity: 1;
+}
+
+/* Forest Floor Transition */
+.forest-floor-transition {
+    background: linear-gradient(to bottom, #f8f8f6 0%, #e8e6e0 100%);
+}
+
+/* Masonry Grid for Trips */
+.trips-grid {
+    column-count: 1;
+    column-gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .trips-grid {
+        column-count: 2;
+    }
+}
+
+@media (min-width: 1024px) {
+    .trips-grid {
+        column-count: 3;
+    }
+}
+
+/* Language Active State */
+#lang-en.active,
+#lang-id.active {
+    color: white;
+    font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-carousel {
+        margin-top: 48px;
+        height: calc(100vh - 48px);
+    }
+
+    .hero-carousel .slide {
+        height: calc(100vh - 48px);
+    }
+}
