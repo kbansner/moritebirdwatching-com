@@ -232,7 +232,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="bg-[#1a2e26] rounded-md p-3 font-mono">
+                            <div class="bg-[#1a2e26] rounded-md p<-3 font-mono">
                                 <div class="grid grid-cols-2 gap-2 text-xs">
                                     <div>
                                         <span class="text-white/60 block mb-1">Latitude</span>
@@ -413,10 +413,9 @@
                                 </video>
                             </div>
                             <div class="relative aspect-[3/4] overflow-hidden rounded-lg">
-                                <img
-                                    src="/src/assets/vertical-view.jpg"
-                                    alt="View from Morite Ecolodge"
-                                    class="w-full h-full object-cover" />
+                                <video src="/src/assets/lodge-pano.mp4" controls class="w-full h-full object-cover">
+                                    Your browser does not support the video tag.
+                                </video>
                             </div>
                         </div>
                     </div>
@@ -528,6 +527,46 @@
                                             data-id="IDR 750.000">
                                             IDR 750,000
                                         </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-3 gap-3 fade-in delay-5 mt-8">
+                                <div
+                                    class="group relative aspect-video overflow-hidden rounded-md border border-white/20 shadow-sm">
+                                    <img
+                                        src="/src/assets/lodge-bedroom.jpg"
+                                        alt="Ecolodge Bedroom"
+                                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                                    <div class="absolute bottom-0 left-0 right-0 bg-black/40 py-1 text-center">
+                                        <span class="text-[10px] uppercase tracking-wider text-white font-medium"
+                                            >Bedroom</span
+                                        >
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="group relative aspect-video overflow-hidden rounded-md border border-white/20 shadow-sm">
+                                    <img
+                                        src="/src/assets/lodge-bathroom.jpg"
+                                        alt="Ecolodge Bathroom"
+                                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                                    <div class="absolute bottom-0 left-0 right-0 bg-black/40 py-1 text-center">
+                                        <span class="text-[10px] uppercase tracking-wider text-white font-medium"
+                                            >Bathroom</span
+                                        >
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="group relative aspect-video overflow-hidden rounded-md border border-white/20 shadow-sm">
+                                    <img
+                                        src="/src/assets/balcony-view-person.jpg"
+                                        alt="Relaxing on the balcony"
+                                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                                    <div class="absolute bottom-0 left-0 right-0 bg-black/40 py-1 text-center">
+                                        <span class="text-[10px] uppercase tracking-wider text-white font-medium"
+                                            >The View</span
+                                        >
                                     </div>
                                 </div>
                             </div>
@@ -665,11 +704,11 @@
                                                 Custom Tree Platforms
                                             </option>
                                             <option value="tour-trekking" class="bg-slate-800">Trekking</option>
-                                            <option value="tour-ambon-buano-seram" class="bg-slate-800">
-                                                Ambon, Buano, Seram Tours
+                                            <option value="west-seram-boano" class="bg-slate-800">
+                                                The West Seram & Boano Circuit
                                             </option>
-                                            <option value="tour-manusela" class="bg-slate-800">
-                                                Morite, Manusela, Masihulan Tours
+                                            <option value="manusela-conservation" class="bg-slate-800">
+                                                Manusela Conservation Camp
                                             </option>
                                             <option value="directions" class="bg-slate-800">
                                                 Directions to Masihulan
@@ -686,6 +725,22 @@
                                         <input
                                             type="email"
                                             name="_replyto"
+                                            class="flex-1 px-4 py-2 bg-white/10 border border-white/20 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 transition" />
+                                    </div>
+
+                                    <div class="flex flex-col md:flex-row md:items-center">
+                                        <label
+                                            for="phone"
+                                            class="text-right pr-4 w-full md:w-32 text-sm font-medium text-white mb-1 md:mb-0">
+                                            WhatsApp Number
+                                        </label>
+                                        <input
+                                            type="tel"
+                                            id="phone"
+                                            name="phone"
+                                            placeholder="+62..."
+                                            pattern="^\+?[1-9]\d{1,14}$"
+                                            title="Please enter a full international phone number starting with + (e.g., +62812345678)"
                                             class="flex-1 px-4 py-2 bg-white/10 border border-white/20 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 transition" />
                                     </div>
 

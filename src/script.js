@@ -104,6 +104,20 @@ const tripsData = {
       description:
         "This is a very strenuous hike which requires a number of porters to carry your food as well as things to barter on your way through the Manusela National Park. For the first four days you'll be staying in villages enjoying the warm hospitality of their chiefs. The last two or three nights on the way down from the village of Manusela to the southern coast, you'll sleep in caves cut into the rock face.",
     },
+    {
+      title: "The West Seram & Boano Circuit",
+      duration: "9 days",
+      groupSize: "up to 4 people",
+      description:
+        "A comprehensive island-hopping quest for rare endemics. Target the critically endangered Boano Monarch and the iconic Salmon-crested Cockatoo. Includes stays in floating seaside cottages, boat expeditions to the Seven Islands, and a specialized night search for the elusive Seram Masked Owl.",
+    },
+    {
+      title: "Manusela Conservation Camp",
+      duration: "Flexible",
+      groupSize: "up to 4 people",
+      description:
+        'Immerse yourself in our private 20-hectare conservation buffer zone. Stay in a sustainable forest homestay to witness "spooky" butterflies and vibrant parrots. Activities include tracking nocturnal cuscuses, river prawning by headlamp, and exploring the majestic old-growth canopy of Masihulan.',
+    },
   ],
   id: [
     {
@@ -147,6 +161,20 @@ const tripsData = {
       groupSize: "Hingga 6 orang",
       description:
         "Ini adalah pendakian yang sangat berat yang membutuhkan sejumlah porter untuk membawa makanan Anda serta barang untuk barter dalam perjalanan Anda melalui Taman Nasional Manusela. Selama empat hari pertama Anda akan tinggal di desa menikmati keramahan hangat kepala suku mereka. Dua atau tiga malam terakhir dalam perjalanan turun dari desa Manusela ke pantai selatan, Anda akan tidur di gua yang dipotong ke wajah batu.",
+    },
+    {
+      title: "Sirkuit Seram Barat & Boano",
+      duration: "9 hari",
+      groupSize: "hingga 4 orang",
+      description:
+        "Petualangan jelajah pulau yang komprehensif untuk mencari spesies endemik langka. Targetkan Monarch Boano yang terancam punah dan Kakatua Seram yang ikonik. Termasuk menginap di penginapan terapung di tepi laut, ekspedisi kapal ke Tujuh Pulau, dan pencarian malam khusus untuk Burung Hantu Seram yang langka.",
+    },
+    {
+      title: "Kem Konservasi Manusela",
+      duration: "Fleksibel",
+      groupSize: "hingga 4 orang",
+      description:
+        "Benamkan diri Anda dalam zona penyangga konservasi pribadi seluas 20 hektar milik kami. Menginaplah di homestay hutan yang berkelanjutan untuk menyaksikan kupu-kupu eksotis dan nuri yang berwarna-warni. Aktivitas meliputi pelacakan kuskus nokturnal, mencari udang sungai dengan lampu kepala, dan menjelajahi kanopi hutan tua Masihulan yang megah.",
     },
   ],
 };
