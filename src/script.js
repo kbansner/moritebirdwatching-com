@@ -9,25 +9,25 @@ const birdsData = {
       scientific: "Cacatua moluccensis",
       description:
         "A critically endangered cockatoo found nowhere else on earth. The villagers are now playing a vital role in protecting this species from illegal trading.",
-      image: "/src/assets/hiding-tree.jpg",
+      image: new URL("/src/assets/hiding-tree.jpg", import.meta.url).href,
     },
     {
       name: "Eclectus Parrots",
       scientific: "Eclectus roratus",
       description: "Known for extreme sexual dimorphism with brilliant green males and red females.",
-      image: "/src/assets/eclectus-male-female.jpg",
+      image: new URL("/src/assets/eclectus-male-female.jpg", import.meta.url).href,
     },
     {
       name: "Red Lories",
       scientific: "Eos bornea",
       description: "Beautiful red parrots commonly found throughout the Maluku islands.",
-      image: "/src/assets/red-lories.jpg",
+      image: new URL("/src/assets/red-lories.jpg", import.meta.url).href,
     },
     {
       name: "Hornbills",
       scientific: "Bucerotidae",
       description: "Large birds with impressive curved bills, found in the forests of Seram.",
-      image: "/src/assets/hornbill.jpg",
+      image: new URL("/src/assets/hornbill.jpg", import.meta.url).href,
     },
   ],
   id: [
@@ -36,25 +36,25 @@ const birdsData = {
       scientific: "Cacatua moluccensis",
       description:
         "Kakatua yang terancam punah yang hanya ditemukan di sini. Penduduk desa kini memainkan peran penting dalam melindungi spesies ini dari perdagangan ilegal.",
-      image: "/src/assets/hiding-tree.jpg",
+      image: new URL("/src/assets/hiding-tree.jpg", import.meta.url).href,
     },
     {
       name: "Nuri Sayap Hijau",
       scientific: "Eclectus roratus",
       description: "Dikenal karena dimorfisme seksual ekstrem dengan jantan hijau cemerlang dan betina merah.",
-      image: "/src/assets/eclectus-male-female.jpg",
+      image: new URL("/src/assets/eclectus-male-female.jpg", import.meta.url).href,
     },
     {
       name: "Nuri Merah",
       scientific: "Eos bornea",
       description: "Burung beo merah cantik yang umum ditemukan di kepulauan Maluku.",
-      image: "/src/assets/red-lories.jpg",
+      image: new URL("/src/assets/red-lories.jpg", import.meta.url).href,
     },
     {
       name: "Rangkong",
       scientific: "Bucerotidae",
       description: "Burung besar dengan paruh melengkung yang mengesankan, ditemukan di hutan Seram.",
-      image: "/src/assets/hornbill.jpg",
+      image: new URL("/src/assets/hornbill.jpg", import.meta.url).href,
     },
   ],
 };
