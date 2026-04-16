@@ -19,15 +19,43 @@ body {
     color: #3d3d3d;
     overflow-x: hidden;
 }
+
+/* Typography */
+h1 {
+    line-height: 1.2;
+}
+
+/* Navigation */
+nav a {
+    font-size: 13px;
+}
+
+nav button {
+    font-size: 13px;
+}
+
+/* Hero Text */
+.hero-text h1 {
+    line-height: 1.2;
+}
+
+/* Field Notes Card with Glassmorphism */
+.field-notes-card {
+    background-image: linear-gradient(to bottom, #f5f3ed 0%, #ebe8dd 100%);
+    box-shadow:
+        0 20px 40px rgba(45, 74, 62, 0.15),
+        0 10px 20px rgba(45, 74, 62, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
-    font-family: var(--font-serif);
-}
-.font-serif {
+h6,
+.font-sans {
     font-family: var(--font-serif);
 }
 
@@ -65,8 +93,17 @@ html {
     -webkit-backdrop-filter: blur(10px);
 }
 
-/* Fade in sections */
+/* Fade in animations */
 .fade-in-section {
+    position: relative;
+}
+
+section {
+    position: relative;
+}
+
+.fade-in {
+    position: relative;
     opacity: 0;
     transform: translateY(30px);
     transition:
@@ -74,9 +111,29 @@ html {
         transform 0.6s ease-out;
 }
 
-.fade-in-section.visible {
+.fade-in.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Stagger animation delays for cards */
+.fade-in.delay-1 {
+    transition-delay: 0.1s;
+}
+.fade-in.delay-2 {
+    transition-delay: 0.2s;
+}
+.fade-in.delay-3 {
+    transition-delay: 0.3s;
+}
+.fade-in.delay-4 {
+    transition-delay: 0.4s;
+}
+.fade-in.delay-5 {
+    transition-delay: 0.5s;
+}
+.fade-in.delay-6 {
+    transition-delay: 0.6s;
 }
 
 /* Bird Cards */
@@ -176,23 +233,10 @@ html {
     transform: translateY(-4px);
 }
 
-/* Canopy Transition Parallax */
-.canopy-transition {
+/* Section Dividers */
+.section-divider {
+    height: 4rem;
     background: linear-gradient(to bottom, #f8f8f6 0%, #e8e6e0 50%, #f8f8f6 100%);
-}
-
-.canopy-layers {
-    opacity: 0;
-    transition: opacity 0.6s ease;
-}
-
-.canopy-layers.visible {
-    opacity: 1;
-}
-
-/* Forest Floor Transition */
-.forest-floor-transition {
-    background: linear-gradient(to bottom, #f8f8f6 0%, #e8e6e0 100%);
 }
 
 /* Masonry Grid for Trips */

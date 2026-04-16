@@ -172,8 +172,9 @@ function generateWaveform(index) {
 // Create bird card HTML
 function createBirdCard(bird, index) {
   const wavePoints = generateWaveform(index);
+  const delayClass = index < 6 ? `delay-${index + 1}` : "";
   return `
-        <div class="bird-card">
+        <div class="bird-card fade-in ${delayClass}">
             <div class="waveform">
                 <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
                     <polyline points="${wavePoints}" fill="none" stroke="#5a7c65" stroke-width="0.3" opacity="0.6" vector-effect="non-scaling-stroke" transform="translate(0, -48)"/>
@@ -197,9 +198,10 @@ function createBirdCard(bird, index) {
 }
 
 // Create trip card HTML
-function createTripCard(trip) {
+function createTripCard(trip, index) {
+  const delayClass = index < 6 ? `delay-${index + 1}` : "";
   return `
-        <div class="trip-card">
+        <div class="trip-card fade-in ${delayClass}">
             <h3 class="text-2xl mb-4 text-[#2d4a3e] font-semibold">${trip.title}</h3>
             <div class="space-y-2 mb-4 text-sm text-[#3d3d3d]/70">
                 <div class="flex items-center gap-2">
@@ -219,43 +221,44 @@ function createTripCard(trip) {
 // Render birds
 function renderBirds() {
   const container = document.getElementById("birdCards");
-  const birds = birdsData[currentLanguage];
-  container.innerHTML = birds.map((bird, index) => createBirdCard(bird, index)).join("");
+  if (container) {
+    const birds = birdsData[currentLanguage];
+    container.innerHTML = birds.map((bird, index) => createBirdCard(bird, index)).join("");
+    observeElements();
+  }
 }
 
 // Render trips
 function renderTrips() {
   const container = document.getElementById("tripCards");
-  const trips = tripsData[currentLanguage];
-  container.innerHTML = `<div class="trips-grid">${trips.map(createTripCard).join("")}</div>`;
+  if (container) {
+    const trips = tripsData[currentLanguage];
+    container.innerHTML = `<div class="trips-grid">${trips.map((trip, index) => createTripCard(trip, index)).join("")}</div>`;
+    observeElements();
+  }
 }
 
 // Switch language
 function switchLanguage(lang) {
   currentLanguage = lang;
 
-  // Update active language button
-  document.getElementById("lang-en").classList.toggle("active", lang === "en");
-  document.getElementById("lang-id").classList.toggle("active", lang === "id");
+  const langEn = document.getElementById("lang-en");
+  const langId = document.getElementById("lang-id");
+  if (langEn) langEn.classList.toggle("active", lang === "en");
+  if (langId) langId.classList.toggle("active", lang === "id");
 
-  // Update all elements with data-en and data-id attributes
   document.querySelectorAll("[data-en][data-id]").forEach((el) => {
     el.textContent = el.getAttribute(`data-${lang}`);
   });
 
-  // Re-render dynamic content
   renderBirds();
   renderTrips();
 }
 
-// Initialize language buttons
-document.getElementById("lang-en").addEventListener("click", () => switchLanguage("en"));
-document.getElementById("lang-id").addEventListener("click", () => switchLanguage("id"));
-
 // Intersection Observer for fade-in animations
 const observerOptions = {
   threshold: 0.1,
-  rootMargin: "0px 0px -100px 0px",
+  rootMargin: "0px 0px -50px 0px",
 };
 
 const observer = new IntersectionObserver((entries) => {
@@ -266,50 +269,40 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, observerOptions);
 
-// Observe all fade-in sections
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".fade-in-section").forEach((el) => {
+// Observe all fade-in elements
+function observeElements() {
+  document.querySelectorAll(".fade-in:not(.visible)").forEach((el) => {
     observer.observe(el);
   });
+}
 
-  // Initialize language
+// Initialize on DOM ready
+document.addEventListener("DOMContentLoaded", () => {
   switchLanguage("en");
 
-  // Initialize hero carousel
-  $("#heroSlider").slick({
-    dots: true,
-    infinite: true,
-    speed: 1000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    fade: true,
-    arrows: false,
-    pauseOnHover: false,
-  });
+  const langEn = document.getElementById("lang-en");
+  const langId = document.getElementById("lang-id");
+  if (langEn) langEn.addEventListener("click", () => switchLanguage("en"));
+  if (langId) langId.addEventListener("click", () => switchLanguage("id"));
 
-  window.addEventListener("scroll", () => {
-    const scrollPercent = Math.max(0, Math.min(1, 1 - rect.top / window.innerHeight));
+  observeElements();
 
-    // Fade in/out
-    if (scrollPercent > 0.2 && scrollPercent < 0.8) {
-      canopyLayers.classList.add("visible");
-    }
+  const heroSlider = $("#heroSlider");
+  if (heroSlider.length) {
+    heroSlider.slick({
+      dots: true,
+      infinite: true,
+      speed: 1000,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 5000,
+      fade: true,
+      arrows: false,
+      pauseOnHover: false,
+    });
+  }
 
-    // Parallax movement
-    if (canopyBg) canopyBg.style.transform = `translateY(${scrollPercent * 10}%)`;
-    if (canopyMid) canopyMid.style.transform = `translateY(${scrollPercent * 20}%)`;
-    if (canopyFg) canopyFg.style.transform = `translateY(${scrollPercent * 30}%)`;
-
-    // Cockatoo reveal
-    if (cockatoo && scrollPercent >= 0.4 && scrollPercent <= 0.6) {
-      const cockatooOpacity = Math.min(0.7, (scrollPercent - 0.4) * 2.5);
-      cockatoo.style.opacity = cockatooOpacity;
-    }
-  });
-
-  // Smooth scroll for navigation links
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       e.preventDefault();
