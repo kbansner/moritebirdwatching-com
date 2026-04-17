@@ -1,12 +1,43 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Morite Birdwatching - Seram Island, Indonesia</title>
 
         <!-- Tailwind CSS CDN -->
         <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
 
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        aspectRatio: {
+                            "4/3": "4 / 3",
+                            "3/2": "3 / 2",
+                        },
+                    },
+                },
+                plugins: [
+                    function ({ addUtilities }) {
+                        addUtilities({
+                            ".scrollbar-hide": {
+                                "-ms-overflow-style": "none",
+                                "scrollbar-width": "none",
+                                "&::-webkit-scrollbar": {
+                                    display: "none",
+                                },
+                            },
+                        });
+                    },
+                ],
+            };
+        </script>
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,6 +56,15 @@
             href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
         <link rel="stylesheet" href="/src/styles.css" />
+        <script src="https://www.googletagmanager.com/gtag/js?id=G-KLL7KGZHY2" async="true"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+            gtag("config", "G-KLL7KGZHY2");
+        </script>
         <script type="module" src="/src/script.js"></script>
     </head>
     <body class="bg-[#f8f8f6] font-sans">
@@ -374,6 +414,148 @@
                     </p>
                 </div>
 
+                <!--Scrolling images-->
+                <div class="my-12 max-w-7xl mx-auto px-6">
+                    <div class="flex space-x-4 overflow-x-auto pb-4 scrollbar-hide">
+                        <div class="relative flex-shrink-0 w-80 aspect-[4/3] rounded-2xl overflow-hidden group">
+                            <img
+                                src="/src/assets/tours/jungle-walk.jpg"
+                                alt="Guided Nature Walks"
+                                class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
+                            <div class="absolute bottom-0 p-4">
+                                <p class="text-white text-sm font-semibold">Guided Nature Walks</p>
+                            </div>
+                        </div>
+
+                        <div class="relative flex-shrink-0 w-80 aspect-[4/3] rounded-2xl overflow-hidden group">
+                            <img
+                                src="/src/assets/tours/jungle-walk-flower.jpg"
+                                alt="Guided Nature Walks"
+                                class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
+                            <div class="absolute bottom-0 p-4">
+                                <p class="text-white text-sm font-semibold">Guided Nature Walks</p>
+                            </div>
+                        </div>
+
+                        <div class="relative flex-shrink-0 w-80 aspect-[4/3] rounded-2xl overflow-hidden group">
+                            <img
+                                src="/src/assets/tours/manusela-river.jpg"
+                                alt="Trekking Across Seram"
+                                class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
+                            <div class="absolute bottom-0 p-4">
+                                <p class="text-white text-sm font-semibold">Trekking Across Seram</p>
+                            </div>
+                        </div>
+
+                        <div class="relative flex-shrink-0 w-80 aspect-[4/3] rounded-2xl overflow-hidden group">
+                            <img
+                                src="/src/assets/tours/manusela-south.jpg"
+                                alt="Trekking Across Seram"
+                                class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
+                            <div class="absolute bottom-0 p-4">
+                                <p class="text-white text-sm font-semibold">Trekking Across Seram</p>
+                            </div>
+                        </div>
+
+                        <div class="relative flex-shrink-0 w-80 aspect-[4/3] rounded-2xl overflow-hidden group">
+                            <img
+                                src="/src/assets/tours/platform-from-below.jpg"
+                                alt="Canopy Platform Trips"
+                                class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
+                            <div class="absolute bottom-0 p-4">
+                                <p class="text-white text-sm font-semibold">Canopy Platform Trips</p>
+                            </div>
+                        </div>
+                        <div class="relative flex-shrink-0 w-80 aspect-[4/3] rounded-2xl overflow-hidden group">
+                            <img
+                                src="/src/assets/tours/platform-pully.jpg"
+                                alt="Canopy Platform Trips"
+                                class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
+                            <div class="absolute bottom-0 p-4">
+                                <p class="text-white text-sm font-semibold">Canopy Platform Trips</p>
+                            </div>
+                        </div>
+                        <div class="relative flex-shrink-0 w-80 aspect-[4/3] rounded-2xl overflow-hidden group">
+                            <img
+                                src="/src/assets/tours/platform-view.jpg"
+                                alt="Canopy Platform View"
+                                class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
+                            <div class="absolute bottom-0 p-4">
+                                <p class="text-white text-sm font-semibold">Canopy Platform View</p>
+                            </div>
+                        </div>
+                        <div class="relative flex-shrink-0 w-80 aspect-[4/3] rounded-2xl overflow-hidden group">
+                            <img
+                                src="/src/assets/tours/api-lima.jpg"
+                                alt="Api Lima"
+                                class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
+                            <div class="absolute bottom-0 p-4">
+                                <p class="text-white text-sm font-semibold">Api Lima</p>
+                            </div>
+                        </div>
+                        <div class="relative flex-shrink-0 w-80 aspect-[4/3] rounded-2xl overflow-hidden group">
+                            <img
+                                src="/src/assets/tours/api-lima-cockatoo.jpg"
+                                alt="Api Lima Cockatoo"
+                                class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
+                            <div class="absolute bottom-0 p-4">
+                                <p class="text-white text-sm font-semibold">Api Lima Cockatoo</p>
+                            </div>
+                        </div>
+                        <div class="relative flex-shrink-0 w-80 aspect-[4/3] rounded-2xl overflow-hidden group">
+                            <img
+                                src="/src/assets/tours/api-lima-hornbill.jpg"
+                                alt="Api Lima Hornbill"
+                                class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
+                            <div class="absolute bottom-0 p-4">
+                                <p class="text-white text-sm font-semibold">Api Lima Hornbill</p>
+                            </div>
+                        </div>
+
+                        <div class="relative flex-shrink-0 w-80 aspect-[4/3] rounded-2xl overflow-hidden group">
+                            <img
+                                src="/src/assets/tours/custom-platform.jpg"
+                                alt=""
+                                class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
+                            <div class="absolute bottom-0 p-4">
+                                <p class="text-white text-sm font-semibold">Custom Tree Platform</p>
+                            </div>
+                        </div>
+                        <div class="relative flex-shrink-0 w-80 aspect-[4/3] rounded-2xl overflow-hidden group">
+                            <img
+                                src="/src/assets/tours/custom-platform-build.jpg"
+                                alt=""
+                                class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
+                            <div class="absolute bottom-0 p-4">
+                                <p class="text-white text-sm font-semibold">Custom Tree Platform</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div id="tripCards">
                     <!-- Trip cards will be populated by JavaScript -->
                 </div>
@@ -530,9 +712,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="grid grid-cols-3 gap-3 fade-in delay-5 mt-8">
+                            <div class="grid grid-cols-1 lg:grid-cols-3 gap-3 fade-in delay-5 mt-8">
                                 <div
-                                    class="group relative aspect-video overflow-hidden rounded-md border border-white/20 shadow-sm">
+                                    class="group relative aspect-[4/3] overflow-hidden rounded-md border border-white/20 shadow-sm">
                                     <img
                                         src="/src/assets/lodge-bedroom.jpg"
                                         alt="Ecolodge Bedroom"
@@ -545,7 +727,7 @@
                                 </div>
 
                                 <div
-                                    class="group relative aspect-video overflow-hidden rounded-md border border-white/20 shadow-sm">
+                                    class="group relative aspect-[4/3] overflow-hidden rounded-md border border-white/20 shadow-sm">
                                     <img
                                         src="/src/assets/lodge-bathroom.jpg"
                                         alt="Ecolodge Bathroom"
@@ -558,7 +740,7 @@
                                 </div>
 
                                 <div
-                                    class="group relative aspect-video overflow-hidden rounded-md border border-white/20 shadow-sm">
+                                    class="group relative aspect-[4/3] overflow-hidden rounded-md border border-white/20 shadow-sm">
                                     <img
                                         src="/src/assets/balcony-view-person.jpg"
                                         alt="Relaxing on the balcony"
@@ -673,7 +855,7 @@
                                     method="POST">
                                     <div class="flex flex-col md:flex-row md:items-center">
                                         <label
-                                            class="text-right pr-4 w-full md:w-32 text-sm font-medium text-white mb-1 md:mb-0">
+                                            class="text-left md:text-right pr-4 w-full md:w-32 text-sm font-medium text-white mb-1 md:mb-0">
                                             Name
                                         </label>
                                         <input
@@ -684,7 +866,7 @@
 
                                     <div class="flex flex-col md:flex-row md:items-center">
                                         <label
-                                            class="text-right pr-4 w-full md:w-32 text-sm font-medium text-white mb-1 md:mb-0">
+                                            class="text-left md:text-right pr-4 w-full md:w-32 text-sm font-medium text-white mb-1 md:mb-0">
                                             Topic
                                         </label>
                                         <select
@@ -719,7 +901,7 @@
 
                                     <div class="flex flex-col md:flex-row md:items-center">
                                         <label
-                                            class="text-right pr-4 w-full md:w-32 text-sm font-medium text-white mb-1 md:mb-0">
+                                            class="text-left md:text-right pr-4 w-full md:w-32 text-sm font-medium text-white mb-1 md:mb-0">
                                             Email
                                         </label>
                                         <input
@@ -731,7 +913,7 @@
                                     <div class="flex flex-col md:flex-row md:items-center">
                                         <label
                                             for="phone"
-                                            class="text-right pr-4 w-full md:w-32 text-sm font-medium text-white mb-1 md:mb-0">
+                                            class="text-left md:text-right pr-4 w-full md:w-32 text-sm font-medium text-white mb-1 md:mb-0">
                                             WhatsApp Number
                                         </label>
                                         <input
@@ -746,7 +928,7 @@
 
                                     <div class="flex flex-col md:flex-row md:items-start">
                                         <label
-                                            class="text-right pr-4 w-full md:w-32 text-sm font-medium text-white pt-2 mb-1 md:mb-0">
+                                            class="text-left md:text-right pr-4 w-full md:w-32 text-sm font-medium text-white pt-2 mb-1 md:mb-0">
                                             Message
                                         </label>
                                         <textarea
