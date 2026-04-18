@@ -272,7 +272,6 @@ section {
     vertical-align: top; /* Prevents tiny sub-pixel gaps at the bottom */
     background: rgba(255, 255, 255, 0.95);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
-
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 0.5rem;
     padding: 1.5rem;
