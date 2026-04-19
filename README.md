@@ -87,3 +87,4 @@ Works in all modern browsers:
 ## License
 
 © 2026 Morite Birdwatching. All rights reserved.
+Crazy
